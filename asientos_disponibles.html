@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asientos disponibles</title>
+    <link rel="stylesheet" href="asientos_disponibles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="asientos_disponibles.js" defer></script>
+</head>
+<body>
+    <!----------------------------------------->
+    <!--|estructuracion_asientos_disponibles|-->
+    <!----------------------------------------->
+    <header class="encabezado">
+        <div class="icono_encabezado">
+            <i class="fa-solid fa-chair"></i>
+        </div>
+        <div>
+            <h1>Asientos Disponibles</h1>
+            <p>Selecciona los asientos que deseas ocupar</p>
+        </div>
+    </header>
+    <!------------------------------>
+    <!--|contenido_de_informacion|-->
+    <!------------------------------>
+    <main class="contenedor">
+        <section class="informacion">
+            <div class="titulo">
+                <i class="fa-solid fa-ticket"></i>
+                <div>
+                    <h2>Selecciona tu asiento</h2>
+                    <p>Haz clic sobre un asiento para cambiar su estado.</p>
+                </div>
+            </div>
+            <div class="resumen">
+                <div class="dato">
+                    <span class="indicador disponible"></span>
+                    <span>Disponible</span>
+                </div>
+                <div class="dato">
+                    <span class="indicador ocupado"></span>
+                    <span>Ocupado</span>
+                </div>
+                <div class="contador">
+                    <i class="fa-solid fa-chair"></i>
+                    <span id="contador">10 disponibles</span>
+                </div>
+            </div>
+        </section>
+        <!---------------------------->
+        <!--|filas_para_la_pantalla|-->
+        <!---------------------------->
+        <section class="sala">
+            <div class="pantalla">
+                <i class="fa-solid fa-tv"></i>
+                <span>PANTALLA</span>
+            </div>
+            <div class="fila">
+                <span class="letra_fila">A</span>
+                <button class="asiento disponible" data-id="A1"><i class="fa-solid fa-chair"></i><span>A1</span></button>
+                <button class="asiento disponible" data-id="A2"><i class="fa-solid fa-chair"></i><span>A2</span></button>
+                <button class="asiento disponible" data-id="A3"><i class="fa-solid fa-chair"></i><span>A3</span></button>
+                <button class="asiento disponible" data-id="A4"><i class="fa-solid fa-chair"></i><span>A4</span></button>
+            </div>
+            <div class="fila">
+                <span class="letra_fila">B</span>
+                <button class="asiento disponible" data-id="B1"><i class="fa-solid fa-chair"></i><span>B1</span></button>
+                <button class="asiento disponible" data-id="B2"><i class="fa-solid fa-chair"></i><span>B2</span></button>
+                <button class="asiento disponible" data-id="B3"><i class="fa-solid fa-chair"></i><span>B3</span></button>
+                <button class="asiento disponible" data-id="B4"><i class="fa-solid fa-chair"></i><span>B4</span></button>
+            </div>
+            <div class="fila">
+                <span class="letra_fila">C</span>
+                <button class="asiento disponible" data-id="C1"><i class="fa-solid fa-chair"></i><span>C1</span></button>
+                <button class="asiento disponible" data-id="C2"><i class="fa-solid fa-chair"></i><span>C2</span></button>
+            </div>
+        </section>
+        <!------------------------------------->
+        <!--|control_de_restablecer_asientos|-->
+        <!------------------------------------->
+        <section class="controles">
+            <button id="restablecer" class="boton_reset"><i class="fa-solid fa-rotate-left"></i>Restablecer asientos</button>
+            <p id="mensaje"></p>
+        </section>
+    </main>
+</body>
+</html>
